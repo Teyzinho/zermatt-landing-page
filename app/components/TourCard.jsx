@@ -8,7 +8,7 @@ const TourCard = ({item}) => {
 
   return (
     <div 
-        className='h-[456px] w-full bg-black relative overflow-hidden cursor-pointer group shadow-2xl'
+        className='h-80 sm:h-[456px] w-full bg-black relative overflow-hidden cursor-pointer group shadow-card-shadow'
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
     >

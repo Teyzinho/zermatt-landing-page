@@ -16,6 +16,9 @@ module.exports = {
         'primary' : '#1E1E1E',
         'secondary' : '#F3FFA6'
       },
+      boxShadow:{
+        'card-shadow' : '0px 2px 4px 2px rgba(0, 0, 0, 0.25)'
+      }
     },
   },
   plugins: [],

@@ -22,8 +22,9 @@ export default function Home() {
       <About />
       
       <Tour />
-{/*
+      
       <Culture />
+{/*
 
       <Activity />
 

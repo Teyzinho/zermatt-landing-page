@@ -7,7 +7,7 @@ h2{
 }
 
 .container_padding{
-    @apply xl:px-52 2xl:px-64 px-3
+    @apply  sm:px-16 lg:px-36 xl:px-52 2xl:px-64 px-3
 }
 
 .container_margin_top{
