@@ -15,9 +15,7 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <div className='pt-16'>
 
-      </div>
 
       <Hero />
 

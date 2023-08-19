@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="container_padding flex items-center justify-between bg-primary/10 fixed w-full">
+      <nav className="container_padding flex items-center justify-between text-white fixed w-full z-10 pt-2">
         <div className="flex items-center ">
           <Image src="/montain.svg" width={50} height={50} alt="logo" />
 
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Info */}
-        <div className="gap-6 hidden sm:flex">
+        <div className="gap-6 hidden sm:flex text-lg">
           <span>Sobre</span>
           <span>Tour</span>
           <span>Hospedagem</span>
@@ -66,7 +66,7 @@ const Navbar = () => {
             animate={{ width: "100vw", opacity: 1 }}
             transition={{ duration: 0.5 }}
             exit="close"
-            className="h-full w-full bg-primary absolute right-0 text-white flex flex-col items-center justify-center gap-6 text-2xl pb-10 font-medium"
+            className="h-full w-full bg-primary absolute right-0 text-white flex flex-col items-center justify-center gap-6 text-2xl pb-10 font-medium z-50"
           >
             <button
               className="absolute right-6 top-6 border border-white w-8 h-8 rounded-full "

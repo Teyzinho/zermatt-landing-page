@@ -1,7 +1,6 @@
 import './globals.css'
 
 import { Montserrat } from 'next/font/google'
-import { Montserrat_Alternates } from 'next/font/google'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
