@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 
 import { motion } from "framer-motion";
 
@@ -20,7 +19,7 @@ const About = () => {
           initial={{ opacity: 0, x:-20 }} 
           transition={{delay: 0.2}}
           whileInView={{ opacity: 1, x:0}} 
-          className="lg:text-2xl font-light"
+          className="xl:text-2xl font-light"
         >
           Zermatt, onde o encanto alpino ganha vida. Aninhada sob o olhar atento
           do Matterhorn, nossa cidade é um convite para explorar paisagens de

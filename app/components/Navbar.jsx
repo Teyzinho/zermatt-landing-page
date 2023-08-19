@@ -66,7 +66,7 @@ const Navbar = () => {
             animate={{ width: "100vw", opacity: 1 }}
             transition={{ duration: 0.5 }}
             exit="close"
-            className="h-full w-full bg-primary absolute right-0 text-white flex flex-col items-center justify-center gap-6 text-2xl pb-10 font-medium z-50"
+            className="h-full w-full bg-primary fixed right-0 text-white flex flex-col items-center justify-center gap-6 text-2xl pb-10 font-medium z-50"
           >
             <button
               className="absolute right-6 top-6 border border-white w-8 h-8 rounded-full "
