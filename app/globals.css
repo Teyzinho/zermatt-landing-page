@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 h2{
-    @apply text-4xl font-semibold
+    @apply text-2xl sm:text-4xl font-semibold
 }
 
 .container_padding{
-    @apply  sm:px-16 lg:px-36 xl:px-52 2xl:px-64 px-3
+    @apply  sm:px-16 lg:px-36 xl:px-40 2xl:px-64 px-3
 }
 
 .container_margin_top{
     @apply mt-28
+}
+
+.info_content{
+    @apply flex flex-col gap-2
 }

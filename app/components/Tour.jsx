@@ -41,7 +41,7 @@ const Tour = () => {
             spaceBetween: 20,
           },
         }}
-        className="container_margin_top w-full relative"
+        className="mt-9 w-full relative"
       >
         {tour.map((item, index) =>
           index % 2 === 0 ? (

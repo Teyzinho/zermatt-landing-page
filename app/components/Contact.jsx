@@ -1,13 +1,23 @@
-import React from "react";
 import InfoCard from "./InfoCard";
 
+import { infos } from "../constants/index"
+
 const Contact = () => {
+      console.log(infos)
+
   return (
     <section className="container_padding container_margin_top relative">
       <h2>Informações e Contato</h2>
 
-      <div className="flex gap-5">
-        <InfoCard/>
+
+      {/* <div className="grid grid-cols-4 gap-5 mt-9"> */}
+      <div className="lg:grid lg:grid-cols-3 xl:grid-cols-4  gap-3 2xl:gap-5 mt-9">
+        {
+          infos.map((info) => (
+            <InfoCard info={info} key={info.title}/>
+          ))
+        }
+
       </div>
     </section>
   );

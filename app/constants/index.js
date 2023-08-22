@@ -53,3 +53,52 @@ export const hotels = [
         numAva: 613
     },
 ]
+
+export const infos = [
+    {
+    image: '/contact.svg',
+    title: 'Contato',
+    content: `<div>
+    <p className='font-medium'>Endereço</p>
+    <p>Zermatt, Valais, Suíça</p>
+  </div>
+  
+  <div>
+    <p className='font-medium'>Telefone:</p>
+    <p>+41 (0) 27 XXX XXXX</p>
+  </div>
+  
+  <div>
+    <p className='font-medium'>Email:</p>
+    <p>info@visit-zermatt.com</p>
+  </div>`,
+},
+{
+    image: '/coffee.svg',
+    title: 'Acomodação',
+    content: `
+        <p>Reserve seu hotel</p>
+        <p>Camping</p>
+        <p>Albergues</p>
+    `,
+},
+{
+    image: '/transport.svg',
+    title: 'Transporte',
+    content: `
+        <p>Horario dos Ferroviarios</p>
+    `,
+},
+{
+    image: '/info.svg',
+    title: 'Informação local',
+    content: `
+        <p>Eventos</p>
+        <p>Restaurantes</p>
+        <p>Parques e praças</p>
+    `,
+},
+
+
+
+]
