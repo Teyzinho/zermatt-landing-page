@@ -6,7 +6,7 @@ import TourCard from "./TourCard";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useCallback, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 
 const Tour = () => {
@@ -26,13 +26,17 @@ const Tour = () => {
           swiperRef.current = swiper;
         }}
         slidesPerView={2}
-        spaceBetween={20}
+        spaceBetween={8}
         breakpoints={{
           640: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 8,
           },
           1024: {
+            slidesPerView: 4,
+            spaceBetween: 8,
+          },
+          1281: {
             slidesPerView: 4,
             spaceBetween: 20,
           },
