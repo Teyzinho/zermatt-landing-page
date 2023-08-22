@@ -12,13 +12,13 @@ const ativitys = [
     image: "/images/esqui.png",
   },
   {
-    title: "",
-    desc: "",
+    title: "Trilhas de Montanha",
+    desc: "Explore a beleza alpina através de trilhas bem marcadas. Desde caminhadas tranquilas até trilhas mais desafiadoras, as vistas panorâmicas e a natureza exuberante estão ao alcance de todos.",
     image: "/images/trilhas.webp",
   },
   {
-    title: "",
-    desc: "",
+    title: "Passeios de Bicicleta:",
+    desc: "Tanto para ciclistas experientes quanto para iniciantes, as trilhas para bicicletas oferecem uma maneira emocionante de explorar as paisagens alpinas.",
     image: "/images/bicicleta.jpg",
   },
 ];
@@ -63,7 +63,7 @@ const Activity = () => {
       <h2 className="container_margin_top container_padding">
         Atividades e Aventuras
       </h2>
-      <section className="w-full h-[800px] relative overflow-hidden mt-12">
+      <section className="w-full h-[550px] xl:h-[800px] relative overflow-hidden mt-12">
         <AnimatePresence initial={false} custom={direction}>
           <motion.img
             key={page}
@@ -89,23 +89,23 @@ const Activity = () => {
               }
             }}
             src={ativitys[imageIndex].image}
-            className="object-cover absolute w-full h-full"
+            className="object-cover absolute w-full h-full brightness-95"
             alt="SliderImg"
           />
         </AnimatePresence>
 
-        <div className="absolute w-[456px] h-fit flex flex-col gap-3 justify-center px-4 py-7 bg-black/30 z-10 text-white top-[60%] left-[20%]">
-          <h3 className="text-4xl font-semibold">
+        <div className="absolute w-fit max-w-3xl h-fit flex flex-col gap-3 justify-center px-4 lg:px-16 py-7 bg-black/30 sm:bg-primary z-10 text-white bottom-0 sm:bottom-4 lg:bottom-11 sm:left-1/2 sm:-translate-x-1/2">
+          <h3 className="text-2xl sm:text-4xl font-semibold">
             {ativitys[imageIndex].title}
           </h3>
 
-          <p className="text-base font-medium">{ativitys[imageIndex].desc}</p>
+          <p className=" text-sm sm:text-base font-medium">{ativitys[imageIndex].desc}</p>
         </div>
 
         {/* Left and right buttons */}
         <button
           type="button"
-          className="absolute z-10 top-1/2  p-3 border border-primary rounded-full bg-white sm:right-16 lg:right-36 xl:right-52 2xl:right-64"
+          className="absolute z-10 top-1/2  p-3 border border-primary rounded-full bg-white right-3 sm:right-16 lg:right-36 xl:right-52 2xl:right-64"
           onClick={() => paginate(1)}
         >
           <Image
@@ -117,7 +117,7 @@ const Activity = () => {
         </button>
         <button
           type="button"
-          className="absolute z-10 top-1/2 sm:left-16 lg:left-36 xl:left-52 2xl:left-64 p-3 border border-primary rounded-full bg-white"
+          className="absolute z-10 top-1/2 left-3 sm:left-16 lg:left-36 xl:left-52 2xl:left-64 p-3 border border-primary rounded-full bg-white"
           onClick={() => paginate(-1)}
         >
           <Image
