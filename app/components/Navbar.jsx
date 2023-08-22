@@ -50,7 +50,7 @@ const Navbar = () => {
         className={`container_padding top-0 left-0 flex items-center justify-between text-white fixed w-full z-10 pt-2 transition-all ${prevScrollPos > 500 ? 'bg-primary' : 'bg-none'}`}
       >
         <div className="flex items-center ">
-          <Image src="/montain.svg" width={50} height={50} alt="logo" />
+          <Image src="/mountain.png" width={50} height={50} alt="logo" />
 
           <span className="flex font-medium text-3xl">
             <p>ZERMA</p>

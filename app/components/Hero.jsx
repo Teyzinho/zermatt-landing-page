@@ -8,7 +8,7 @@ const Hero = () => {
         src="/hero.png"
         fill
         alt="heroImg"
-        className="object-cover absolute -z-10"
+        className="object-cover absolute -z-10 brightness-95"
         priority={true}
         quality={100}
       />
@@ -30,6 +30,7 @@ const Hero = () => {
             src="/arrow-down.svg"
             fill
             alt="arrow down"
+            className="object-cover"
           />
         </div>
       </div>
