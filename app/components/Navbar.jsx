@@ -2,10 +2,24 @@
 
 import Image from "next/image";
 import { motion, AnimatePresence, delay } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setisOpen] = useState(false);
+
+  const [scrollingUp, setScrollingUp] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setScrollingUp(currentScrollPos < prevScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
 
   const variants = {
     close: {
@@ -27,11 +41,14 @@ const Navbar = () => {
     },
   };
 
-  console.log(isOpen);
-
   return (
     <>
-      <nav className="container_padding flex items-center justify-between text-white fixed w-full z-10 pt-2">
+      <motion.nav 
+        initial={{ y: 0 }}
+        animate={{ y: scrollingUp ? 0 : -100 }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className={`container_padding top-0 left-0 flex items-center justify-between text-white fixed w-full z-10 pt-2 transition-all ${prevScrollPos > 500 ? 'bg-primary' : 'bg-none'}`}
+      >
         <div className="flex items-center ">
           <Image src="/montain.svg" width={50} height={50} alt="logo" />
 
@@ -55,7 +72,7 @@ const Navbar = () => {
             <Image src="/list.svg" width={35} height={35} alt="list" />
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Animação hamburger menu */}
       <AnimatePresence>

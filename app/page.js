@@ -28,9 +28,8 @@ export default function Home() {
       <Activity />
 
       <Accommodation />
-{/*
 
-      <Contact /> */}
+      <Contact />
 
       <Footer />
     </main>

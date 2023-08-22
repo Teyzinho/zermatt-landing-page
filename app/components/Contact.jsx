@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import InfoCard from "./InfoCard";
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <section className="container_padding container_margin_top relative">
+      <h2>Informações e Contato</h2>
 
-export default Contact
+      <div className="flex gap-5">
+        <InfoCard/>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
