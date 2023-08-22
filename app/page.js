@@ -24,9 +24,9 @@ export default function Home() {
       <Tour />
       
       <Culture />
-{/*
 
       <Activity />
+{/*
 
       <Accommodation />
 
