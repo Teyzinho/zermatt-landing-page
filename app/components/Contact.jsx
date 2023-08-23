@@ -3,10 +3,9 @@ import InfoCard from "./InfoCard";
 import { infos } from "../constants/index"
 
 const Contact = () => {
-      console.log(infos)
 
   return (
-    <section className="container_padding container_margin_top relative">
+    <section id="contact" className="container_padding container_margin_top relative">
       <h2>Informações e Contato</h2>
 
 

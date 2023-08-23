@@ -41,6 +41,14 @@ const Navbar = () => {
     },
   };
 
+  const handleItemClick = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: 'smooth'
+    })
+
+    isOpen && setisOpen(false)
+  }
+
   return (
     <>
       <motion.nav 
@@ -60,10 +68,11 @@ const Navbar = () => {
 
         {/* Desktop Info */}
         <div className="gap-6 hidden sm:flex text-lg">
-          <span>Sobre</span>
-          <span>Tour</span>
-          <span>Hospedagem</span>
-          <span>Contato</span>
+          <button onClick={() => handleItemClick('about')}>Sobre</button>
+          <button onClick={() => handleItemClick('tour')}>Tour</button>
+          <button onClick={() => handleItemClick('ativity')}>Atividades</button>
+          <button onClick={() => handleItemClick('accommodation')}>Hospedagem</button>
+          <button onClick={() => handleItemClick('contact')}>Contato</button>
         </div>
 
         {/* Mobile info */}
@@ -77,7 +86,7 @@ const Navbar = () => {
       {/* Animação hamburger menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.button
             variants={variants}
             initial={{ width: 0, opacity: 0 }}
             animate={{ width: "100vw", opacity: 1 }}
@@ -92,7 +101,8 @@ const Navbar = () => {
               X
             </button>
 
-            <motion.div
+            <motion.button
+            onClick={() => handleItemClick('about')}
               variants={variants}
               initial="initial"
               animate="animate"
@@ -105,11 +115,13 @@ const Navbar = () => {
                   delay: 1,
                 },
               }}
+              
             >
               Sobre
-            </motion.div>
+            </motion.button>
 
-            <motion.div
+            <motion.button
+            onClick={() => handleItemClick('tour')}
               variants={variants}
               initial="initial"
               animate="animate"
@@ -124,9 +136,10 @@ const Navbar = () => {
               }}
             >
               Tour
-            </motion.div>
+            </motion.button>
 
-            <motion.div
+            <motion.button
+            onClick={() => handleItemClick('accommodation')}
               variants={variants}
               initial="initial"
               animate="animate"
@@ -141,9 +154,10 @@ const Navbar = () => {
               }}
             >
               Hospedagem
-            </motion.div>
+            </motion.button>
 
-            <motion.div
+            <motion.button
+            onClick={() => handleItemClick('contact')}
               variants={variants}
               initial="initial"
               animate="animate"
@@ -158,8 +172,8 @@ const Navbar = () => {
               }}
             >
               Contato
-            </motion.div>
-          </motion.div>
+            </motion.button>
+          </motion.button>
         )}
       </AnimatePresence>
     </>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Culture = () => {
   return (
-    <section className="container_padding mt-40">
+    <section id="culture" className="container_padding mt-40">
       <div className="relative ">
         <div className="relative w-full h-96 sm:w-[625px] sm:h-[500px] 2xl:w-[833px] 2xl:h-[607px]">
           <Image

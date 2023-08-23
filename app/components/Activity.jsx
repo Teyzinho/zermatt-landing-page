@@ -63,7 +63,7 @@ const Activity = () => {
       <h2 className="container_margin_top container_padding">
         Atividades e Aventuras
       </h2>
-      <section className="w-full h-[550px] xl:h-[800px] relative overflow-hidden mt-12">
+      <section id="ativity" className="w-full h-[550px] xl:h-[800px] relative overflow-hidden mt-12">
         <AnimatePresence initial={false} custom={direction}>
           <motion.img
             key={page}

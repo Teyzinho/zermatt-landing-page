@@ -13,7 +13,7 @@ const Tour = () => {
   const swiperRef = useRef();
 
   return (
-    <section className="container_padding container_margin_top relative">
+    <section id="tour" className="container_padding container_margin_top relative">
       <h2>Tour</h2>
 
       {/* Linha */}
@@ -41,7 +41,7 @@ const Tour = () => {
             spaceBetween: 20,
           },
         }}
-        className="mt-9' w-full relative"
+        className="mt-9 w-full relative"
       >
         {tour.map((item, index) =>
           index % 2 === 0 ? (

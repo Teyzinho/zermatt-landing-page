@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const About = () => {
 
   return (
-    <section className="container_padding container_margin_top flex flex-col sm:flex-row ">
+    <section id="about" className="container_padding container_margin_top flex flex-col sm:flex-row ">
       <div className="bg-primary color white py-16 px-16 sm:px-20 flex flex-col text-white gap-5 w-full flex-1">
         <motion.h2 
           initial={{ opacity: 0, x:-20 }} 

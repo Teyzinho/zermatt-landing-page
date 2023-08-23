@@ -14,7 +14,7 @@ const Accommodation = () => {
   const swiperRef = useRef();
 
   return (
-    <section className="container_padding container_margin_top relative">
+    <section id="accommodation" className="container_padding container_margin_top relative">
       <div className="flex justify-between">
         <h2>Hospedagem</h2>
 

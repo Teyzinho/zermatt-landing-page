@@ -1,6 +1,14 @@
+"use client";
+
 import Image from "next/image";
 
 const Footer = () => {
+  const handleItemClick = (id) => {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="container_margin_top bg-primary text-white w-full">
       <div className="h-60 flex flex-col items-center justify-center gap-4">
@@ -28,11 +36,14 @@ const Footer = () => {
       </div>
 
       <div className="border-t-2 border-white h-16 flex justify-center items-center">
-        <div className="gap-6 flex sm:text-lg justify-center items-center flex-wrap">
-          <span>Sobre</span>
-          <span>Tour</span>
-          <span>Hospedagem</span>
-          <span>Contato</span>
+        <div className="gap-x-6 gap-y-2 flex sm:text-lg justify-center items-center flex-wrap">
+          <button onClick={() => handleItemClick("about")}>Sobre</button>
+          <button onClick={() => handleItemClick("tour")}>Tour</button>
+          <button onClick={() => handleItemClick("ativity")}>Atividades</button>
+          <button onClick={() => handleItemClick("accommodation")}>
+            Hospedagem
+          </button>
+          <button onClick={() => handleItemClick("contact")}>Contato</button>
         </div>
       </div>
     </footer>
